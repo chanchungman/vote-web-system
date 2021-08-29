@@ -1,47 +1,4 @@
-/*const http = require("http");
-const fs = require("fs"); //fs = file system
-const sendResponse = (filename, statusCode,response) => {
-    fs.readFile((filename),(error, data) =>{
-        if(error){
-            response.statusCode = 500;
-            response.setHeader("Content-Type","text/plain");
-            response.end("error1");
-        }else{
-            response.statusCode = statusCode;
-            response.setHeader("Content-Type","text/html");
-            response.end(data);
-        }
-    }); //get html file name
-} 
 
-const server = http.createServer((request, response) =>{
-    const method = request.method;
-    const url = request.url;
-
-    if(method === "GET"){
-        if (url === "/"){
-            sendResponse("index.html",200,response);
-        }else if (url === "/index.js"){
-            sendResponse("index.js",200,response);
-        }
-        else if (url === "/vote.html"){
-            sendResponse("vote.html",200,response);
-        }
-        else if (url === "/create.html"){
-            sendResponse("create.html",200,response);
-        }
-        else {
-            sendResponse("error.html",404,response);
-        }
-    }
-});
-
-const port = 3000;
-const ip ="127.0.0.1";
-
-server.listen(port, ip, () => {
-    console.log('server is running at http://'+ip+":"+port);
-});*/
 
 const Koa = require("koa");
 const fs = require("fs");
