@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recentend</title>
+    <script src="firebase_config.js"></script> 
+    <script src="recentend.js"></script>  
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <button type="button"  onclick="createvote()">
+    create
+    </button>
+</head>
+<body>
+    <div class="header_bar">
+    <!--<img src="icon.png" width="100" height="70">-->
+    
+    <a type="button"  a href="http://127.0.0.1:3000/" class="active">
+        Home
+    </a>
+    
+    <a type="button"  onclick="createvote()">
+        Create
+    </a>
+    <a  onclick="hotvote()">
+        Hot
+    </a>
+    <a type="button"  onclick="recentend()">
+        Recent End
+    </a>
+    <div class="search-container">
+        <input type="text" placeholder="Search.." id="search">
+        <button type="button"  onclick="search()">🔍</button>
+    </div>
+    </div>
+    
+    <p>
+    
+    
+        
+    </button>
+    <center>
+    <table id="myTable" border="0">
+        <tr class="table-header">
+          <td class="col col-1">id</td>
+          <td class="col col-2">title</td>
+          <td class="col col-3">start</td>
+          <td class="col col-4">end </td>
+          <td class="col col-5">vote</td>
+        </tr>
+      
+    </table>
+    </center>
+    </body>
+</html>

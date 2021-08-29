@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create vote</title>
+    <script src="firebase_config.js"></script> 
+    <script src="createvote.js"></script>
+    <link rel="stylesheet" type="text/css" href="createvote.css">
+</head>
+<body>
+    <div class="header_bar">
+        <!--<img src="icon.png" width="100" height="70">-->
+        
+        <a type="button"  a href="http://127.0.0.1:3000/" class="active">
+            Home
+        </a>
+        
+        <a type="button"  onclick="createvote()">
+            Create
+        </a>
+        <a  onclick="hotvote()">
+            Hot
+        </a>
+        <a type="button"  onclick="recentend()">
+            Recent End
+        </a>
+        <div class="search-container">
+            <input type="text" placeholder="Search.." id="search">
+            <button type="button"  onclick="search()">🔍</button>
+        </div>
+        </div>
+
+    <div class="table">
+
+    <label>Vote title:</label>
+    <input type="text"  placeholder="Vote title:" id="title"><br>
+    <label>Start date:</label>
+    <input type="date"  id="start"><br>
+    <label>End date:</label>
+    <input type="date"  id="end"><br>
+    <label>Voting options:</label>
+    <br><input type="text"  placeholder="Voting options:" id="option 1">
+    <div style="display:inline" id="new">
+    </div>
+    <button type="button" class="add" onclick="add()">+</button><br>
+    <br>
+    <button type="button" class="store" onclick="storedata()">
+        Submit
+    </button>
+    </div>    
+
+</body>
+</html>
